@@ -5,7 +5,7 @@ if (didJIP) then {
 ["InitializePlayer", [player,true]] call BIS_fnc_dynamicGroups;
 grad_template_ratingEH = player addEventHandler ["HandleRating",{0}];
 
-
+/*
 ["CBA_loadingScreenDone", {
     if (!(didJIP) || {(didJIP && !(isNil "GRAD_USER_introOver"))}) then {
         [{time > (_this + 5)},{
@@ -17,4 +17,4 @@ grad_template_ratingEH = player addEventHandler ["HandleRating",{0}];
         },time] call CBA_fnc_waitUntilAndExecute;
     };
 }] call CBA_fnc_addEventHandler;
-
+*/
