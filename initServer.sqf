@@ -12,3 +12,6 @@ private _nextWeatherSet = [date, overcast, rain, [wind select 0, wind select 1, 
 
 grad_user_bigScreenOn = false;
 publicVariable "grad_user_bigScreenOn";
+
+WEST setFriend [EAST, 1];
+EAST setFriend [WEST, 1];
