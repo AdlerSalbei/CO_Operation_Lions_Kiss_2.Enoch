@@ -46,19 +46,19 @@ cutText ["","BLACK OUT", 1];
                         _camera camSetPos (getPos camPos_05);
                         _camera camSetTarget camTarget_05;
                         _camera camCommit 0;
+                        if (isServer) then {
+                            private _vehicle = ["C_Van_02_transport_F", [4045.1,7984.32,0], 0] call grad_user_fnc_createVehicle;
+                            _vehicle setObjectTextureGlobal [0, "a3\soft_f_orange\van_02\data\van_body_aan_co.paa"];
+                            ["gm_gc_pol_p601", [4048.68,7963.8,0], 91.876] call grad_user_fnc_createVehicle;
+                            ["gm_gc_pol_p601", [4048.49,7960.05, 0], 91.876] call grad_user_fnc_createVehicle;
+                            ["gm_gc_pol_p601", [4047.98,7955.49, 0], 89.630] call grad_user_fnc_createVehicle;
+                            ["gm_gc_pol_p601", [4047.51,7950.76,0], 60.755] call grad_user_fnc_createVehicle;
+                            ["gm_gc_pol_p601", [4045.21,7945.13,0], 145.841] call grad_user_fnc_createVehicle;
 
-                        private _vehicle = ["C_Van_02_transport_F", [4045.1,7984.32,0], 0] call grad_user_fnc_createVehicle;
-                        _vehicle setObjectTextureGlobal [0, "a3\soft_f_orange\van_02\data\van_body_aan_co.paa"];
-                        ["gm_gc_pol_p601", [4048.68,7963.8,0], 91.876] call grad_user_fnc_createVehicle;
-                        ["gm_gc_pol_p601", [4048.49,7960.05, 0], 91.876] call grad_user_fnc_createVehicle;
-                        ["gm_gc_pol_p601", [4047.98,7955.49, 0], 89.630] call grad_user_fnc_createVehicle;
-                        ["gm_gc_pol_p601", [4047.51,7950.76,0], 60.755] call grad_user_fnc_createVehicle;
-                        ["gm_gc_pol_p601", [4045.21,7945.13,0], 145.841] call grad_user_fnc_createVehicle;
-
-                        ["gm_gc_pol_officer_80_blu", [4050.45,7971.39,0], 272.351] call grad_user_fnc_createUnit;
-                        ["gm_gc_pol_officer_80_blu", [4051.72,7955.44, 0], 181.096] call grad_user_fnc_createUnit;
-                        ["gm_gc_pol_officer_80_blu", [4051.23,7952.57,0], 10.998] call grad_user_fnc_createUnit;
-                        
+                            ["gm_gc_pol_officer_80_blu", [4050.45,7971.39,0], 272.351] call grad_user_fnc_createUnit;
+                            ["gm_gc_pol_officer_80_blu", [4051.72,7955.44, 0], 181.096] call grad_user_fnc_createUnit;
+                            ["gm_gc_pol_officer_80_blu", [4051.23,7952.57,0], 10.998] call grad_user_fnc_createUnit;
+                        };
                         showCinemaBorder false;
                                 
                         [{      

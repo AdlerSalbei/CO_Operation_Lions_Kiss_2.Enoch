@@ -6151,7 +6151,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=2517;
-					type="B_soldier_UAV_F";
+					type="B_Soldier_SL_F";
 					class CustomAttributes
 					{
 						class Attribute0

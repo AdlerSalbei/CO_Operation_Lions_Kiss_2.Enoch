@@ -13,6 +13,14 @@ private _action = [
         private _pickedUpItems = _player getVariable ["grad_user_pickedUpItems", []];
         _pickedUpItems pushBack (_target getVariable "grad_user_hiddenItem");
         _player setVariable ["grad_user_pickedUpItems", _pickedUpItems];
+
+        private _intelFound = grad_user_intelFound;
+        {
+            if (_x select 0 isEqualTo _target) exitWith {
+                _x set [4, (_x select 4) +1];
+                _intelFound set [_forEachIndex, _x];
+            };
+        }forEach _intelFound;
     },
     {true},
     {},

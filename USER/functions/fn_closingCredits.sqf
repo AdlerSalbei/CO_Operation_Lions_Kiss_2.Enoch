@@ -31,6 +31,17 @@ _text pushBack (_headerText + " ");
 
 _text pushBack (_headerText + "Dankesagung");
 _text pushBack (_bodyText + "Vielen Dank an Bohemia Interactiv für das grossartig Spiel");
+_text pushBack (_bodyText + "Vielen Dank an Odyssey, für die großartige Idee mit dem Audio Easter Egg.");
+_text pushBack (_headerText + " ");
+
+_text pushBack (_headerText + "Intel found");
+
+{
+    _x params ["_type", "_beautifiedName", "_amount", "_amountFound"];
+
+    _text pushBack (_bodyText + format ["%1: %2/%3", _beautifiedName, _amountFound, _amount]);
+}forEach grad_user_intelFound;
+
 _text pushBack (_headerText + " ");
 
 _text pushBack (_headerText + "Helden des Abends");

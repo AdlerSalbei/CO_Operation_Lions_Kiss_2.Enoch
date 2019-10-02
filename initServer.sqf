@@ -10,8 +10,16 @@ private _nextWeatherSet = [date, overcast, rain, [wind select 0, wind select 1, 
     ["grad_changeWeather", _this] call CBA_fnc_serverEvent;
 }, _nextWeatherSet] call CBA_fnc_waitUntilAndExecute;
 
-grad_user_bigScreenOn = false;
-publicVariable "grad_user_bigScreenOn";
+grad_user_intelFound = [
+    ["", "", 1, 0],
+    ["", "", 1, 0],
+    ["", "", 1, 0],
+    ["", "", 1, 0],
+    ["", "", 1, 0],
+    ["", "", 1, 0],
+    ["", "", 1, 0]
+];
+publicVariable "grad_user_intelFound";
 
 WEST setFriend [EAST, 1];
 EAST setFriend [WEST, 1];
