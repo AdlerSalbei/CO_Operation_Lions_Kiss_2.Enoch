@@ -49,6 +49,7 @@ class CfgFunctions
     #include "functions\radiosettings\cfgFunctions.hpp"
 
     #include "node_modules\grad-loadout\cfgFunctions.hpp"
+    #include "node_modules\diwako_cbrn\cfgFunctions.hpp"
 
 	#include "USER\userFunctions.hpp"
 };
@@ -57,6 +58,7 @@ class CfgFunctions
 //DIALOGS ======================================================================
 class RscTitles {
 	#include "USER\userTitles.hpp"
+    #include "node_modules\diwako_cbrn\rsctitles.hpp"
 
     class grad_Default {
         idd = -1;
@@ -90,6 +92,7 @@ class Params {
 //SOUNDS =======================================================================
 class CfgSounds {
 	#include "USER\userSounds.hpp"
+    #include "node_modules\diwako_cbrn\sounds\cfgSounds.hpp"
 
 	class computerStartSound
 	{
