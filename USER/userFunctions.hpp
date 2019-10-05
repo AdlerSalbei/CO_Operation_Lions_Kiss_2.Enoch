@@ -6,6 +6,7 @@
 class GRAD_USER {
     class common {
         file = "USER\functions";
+        class addPanelActions {};
         class chairCircle {};
         class closingCredits {};
         class createVehicle {};
