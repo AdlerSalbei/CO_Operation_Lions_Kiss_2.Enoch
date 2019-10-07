@@ -43,28 +43,14 @@ cutText ["","BLACK OUT", 1];
                     [{
                         params ["_camera", "_filmgrain"];
                                         
-                        _camera camSetPos (getPos camPos_05);
-                        _camera camSetTarget camTarget_05;
+                        _camera camSetPos (getPos camPos_04);
+                        _camera camSetTarget camTarget_04;
                         _camera camCommit 0;
-                        if (isServer) then {
-                            private _vehicle = ["C_Van_02_transport_F", [4045.1,7984.32,0], 0] call grad_user_fnc_createVehicle;
-                            _vehicle setObjectTextureGlobal [0, "a3\soft_f_orange\van_02\data\van_body_aan_co.paa"];
-                            ["gm_gc_pol_p601", [4048.68,7963.8,0], 91.876] call grad_user_fnc_createVehicle;
-                            ["gm_gc_pol_p601", [4048.49,7960.05, 0], 91.876] call grad_user_fnc_createVehicle;
-                            ["gm_gc_pol_p601", [4047.98,7955.49, 0], 89.630] call grad_user_fnc_createVehicle;
-                            ["gm_gc_pol_p601", [4047.51,7950.76,0], 60.755] call grad_user_fnc_createVehicle;
-                            ["gm_gc_pol_p601", [4045.21,7945.13,0], 145.841] call grad_user_fnc_createVehicle;
-
-                            ["gm_gc_pol_officer_80_blu", [4050.45,7971.39,0], 272.351] call grad_user_fnc_createUnit;
-                            ["gm_gc_pol_officer_80_blu", [4051.72,7955.44, 0], 181.096] call grad_user_fnc_createUnit;
-                            ["gm_gc_pol_officer_80_blu", [4051.23,7952.57,0], 10.998] call grad_user_fnc_createUnit;
-                        };
-                        showCinemaBorder false;
                                 
                         [{      
                             cutText ["","BLACK IN", .5];
                             [
-                                parseText "<t size='4'>Mehrere Tote in Radacz gefunden</t>",
+                                parseText "<t size='4'>NATO Übung endet mit Toten</t>",
                                 parseText "     -  Es gibt keinen logischen Grund warum das Alphabet sortiert ist wie es ist.  -  Führende Wissenschaftler sagen Ody Korn sei kein Getränk, sondern ein Reinigungsmittel  -  Trump bietet jedem kostenlose One-Way-Tickets nach Afrika und Mexiko an, der Amerika verlassen will  -  Afrikanischer Milliardär zahlt jedem 1 Million US-Dollar an jeden, der Afrika verlassen will, um nach Amerika zu gehen"
                             ] spawn BIS_fnc_AAN;
 
@@ -74,7 +60,6 @@ cutText ["","BLACK OUT", 1];
                                 (uiNamespace getVariable "BIS_AAN") closeDisplay 1;
                                 [{
                                     cutText ["","BLACK FADED", 999];
-                                    showCinemaBorder true;
 
                                     [{
 

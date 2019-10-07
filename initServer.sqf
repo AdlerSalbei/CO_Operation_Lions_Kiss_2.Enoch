@@ -11,13 +11,12 @@ private _nextWeatherSet = [date, overcast, rain, [wind select 0, wind select 1, 
 }, _nextWeatherSet] call CBA_fnc_waitUntilAndExecute;
 
 grad_user_intelFound = [
-    ["", "", 1, 0],
-    ["", "", 1, 0],
-    ["", "", 1, 0],
-    ["", "", 1, 0],
-    ["", "", 1, 0],
-    ["", "", 1, 0],
-    ["", "", 1, 0]
+    ["Land_Camera_01_F", "Fotokamera", 1, 0],
+    ["Land_HandyCam_F", "Camcorder", 5, 0],
+    ["Land_Laptop_F", "Laptop", 3, 0],
+    ["Land_Tablet_01_F", "Tablet", 4, 0],
+    ["Land_MobilePhone_smart_F", "Smartphone", 1, 0],
+    ["Land_MobilePhone_old_F", "Handy", 1, 0]
 ];
 publicVariable "grad_user_intelFound";
 

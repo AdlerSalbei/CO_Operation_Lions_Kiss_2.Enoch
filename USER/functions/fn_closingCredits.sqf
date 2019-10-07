@@ -25,7 +25,7 @@ if (count _return > 1) then {
 };
 
 _text pushBack (_headerText + "Songs");
-_text pushBack (_bodyText + "Intro: Tac-Ops DLC: Ambient 2a");
+_text pushBack (_bodyText + "Intro: Tanks DLC: Iron Gods");
 _text pushBack (_bodyText + "Outro: Two Steps from Hell - Victory");
 _text pushBack (_headerText + " ");
 
