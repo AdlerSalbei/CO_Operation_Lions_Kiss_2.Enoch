@@ -10,15 +10,19 @@ private _nextWeatherSet = [date, overcast, rain, [wind select 0, wind select 1, 
     ["grad_changeWeather", _this] call CBA_fnc_serverEvent;
 }, _nextWeatherSet] call CBA_fnc_waitUntilAndExecute;
 
-grad_user_intelFound = [
-    ["Land_Camera_01_F", "Fotokamera", 1, 0],
-    ["Land_HandyCam_F", "Camcorder", 5, 0],
-    ["Land_Laptop_F", "Laptop", 3, 0],
-    ["Land_Tablet_01_F", "Tablet", 4, 0],
-    ["Land_MobilePhone_smart_F", "Smartphone", 1, 0],
-    ["Land_MobilePhone_old_F", "Handy", 1, 0]
-];
+grad_user_intelFound = [];
 publicVariable "grad_user_intelFound";
+
+
+grad_user_intelFoundMaxAmount = [
+    ["Land_Camera_01_F", 1],
+    ["Land_HandyCam_F", 5],
+    ["Land_Laptop_F", 3],
+    ["Land_Tablet_01_F", 4],
+    ["Land_MobilePhone_smart_F", 1],
+    ["Land_MobilePhone_old_F", 1]
+];
+publicVariable "grad_user_intelFoundMaxAmount";
 
 WEST setFriend [EAST, 1];
 EAST setFriend [WEST, 1];

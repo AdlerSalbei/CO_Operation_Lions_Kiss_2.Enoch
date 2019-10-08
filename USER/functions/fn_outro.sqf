@@ -7,6 +7,7 @@ cutText ["","BLACK OUT", 1];
 [{
     cutText ["","BLACK FADED", 999];
     ace_player switchMove "amovpercmstpslowwrfldnon";
+    removeGoggles ace_player;
 
     [{
         cutText ["","BLACK IN", 1];

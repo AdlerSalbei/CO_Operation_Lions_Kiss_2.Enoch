@@ -5,12 +5,13 @@ private _action = [
     "Place Items",
     "",
     {
-        private _pickedUpItems = _player getVariable ["grad_user_pickedUpItems", []];
         {
-            ["grad_hideObjectServer", [_x, false]] call CBA_fnc_serverEvent;
-        }forEach _pickedUpItems;
+            _x params ["_unit", "_item"];
+            if (((ace_player isEqualTo _unit) || {!(_unit in allPlayers)}) && (isObjectHidden _item)) then {
+                ["grad_hideObjectServer", [_item, false]] call CBA_fnc_serverEvent;
+            };
 
-        _player setVariable ["grad_user_pickedUpItems", []];
+        }forEach grad_user_intelFound;
     },
     {true},
     {},

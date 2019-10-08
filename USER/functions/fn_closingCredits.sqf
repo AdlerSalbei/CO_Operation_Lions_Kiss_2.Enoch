@@ -36,14 +36,53 @@ _text pushBack (_headerText + " ");
 
 _text pushBack (_headerText + "Intel found");
 
+private _intelFound = [];
 {
-    _x params ["_type", "_beautifiedName", "_amount", "_amountFound"];
+    _x params ["", "_item"];
 
-    _text pushBack (_bodyText + format ["%1: %2/%3", _beautifiedName, _amountFound, _amount]);
+    private _type = typeOf _item;
+    private _name = switch (_type) do {
+        case "Land_HandyCam_F" : {"Camcorder"};
+        case "Land_Laptop_F" : {"Laptop"};
+        case "Land_Tablet_01_F" : {"Tablet"};
+        case "Land_MobilePhone_smart_F" : {"Smartphone"};
+        case "Land_MobilePhone_old_F" : {"Handy"};
+        case "Land_Camera_01_F" : {"Fotokamera"};
+        default {_type};
+    };
+
+    private _index = -1;
+
+    {
+        _x params ["_itemType", "_amount"];
+
+        if (_itemType isEqualTo _type) exitWith {
+            _intelFound set [_forEachIndex, _amount + 1];
+            _index = _forEachIndex;
+        };
+    }forEach _intelFound;
+    
+    if (_index < 0) then {
+        private _amount = 0;
+        {
+            _x params ["_itemType", "_count"];
+
+            if (_itemType isEqualTo _type) exitWith {
+                _amount = _count;
+            };
+        }forEach grad_user_intelFoundMaxAmount;
+
+        _intelFound pushBack [_name, 1, _amount];
+    };
 }forEach grad_user_intelFound;
 
-_text pushBack (_headerText + " ");
+{
+    _x params ["_beautifiedName", "_amount", "_amountFound"];
 
+    _text pushBack (_bodyText + format ["%1: %2/%3", _beautifiedName, _amountFound, _amount]);
+}forEach _intelFound;
+
+_text pushBack (_headerText + " ");
 _text pushBack (_headerText + "Helden des Abends");
 
 _return = [];
